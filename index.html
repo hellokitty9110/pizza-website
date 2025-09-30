@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Paradiso - Artisanal Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🍕 Pizza Paradiso</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-scroll>Fresh.<br>Artisanal.<br>Delicious.</h1>
+            <p class="hero-subtitle" data-scroll>Handcrafted pizzas made with love and the finest ingredients</p>
+            <button class="cta-button" data-scroll onclick="scrollToSection('menu')">View Menu</button>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-pizza pizza-1"></div>
+            <div class="floating-pizza pizza-2"></div>
+            <div class="floating-ingredient ingredient-1"></div>
+            <div class="floating-ingredient ingredient-2"></div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title" data-scroll>Our Signature Pizzas</h2>
+            <div class="menu-grid">
+                <div class="pizza-card" data-scroll>
+                    <div class="pizza-visual">
+                        <div class="pizza-base"></div>
+                        <div class="topping tomato"></div>
+                        <div class="topping cheese"></div>
+                        <div class="topping basil"></div>
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Margherita Classica</h3>
+                        <p>San Marzano tomatoes, fresh mozzarella, basil, extra virgin olive oil</p>
+                        <span class="price">$18.99</span>
+                    </div>
+                </div>
+                <div class="pizza-card" data-scroll>
+                    <div class="pizza-visual">
+                        <div class="pizza-base"></div>
+                        <div class="topping tomato"></div>
+                        <div class="topping cheese"></div>
+                        <div class="topping pepperoni"></div>
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Pepperoni Passion</h3>
+                        <p>House-made pepperoni, mozzarella, tomato sauce, chili flakes</p>
+                        <span class="price">$21.99</span>
+                    </div>
+                </div>
+                <div class="pizza-card" data-scroll>
+                    <div class="pizza-visual">
+                        <div class="pizza-base"></div>
+                        <div class="topping tomato"></div>
+                        <div class="topping cheese"></div>
+                        <div class="topping mushroom"></div>
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Truffle Forest</h3>
+                        <p>Wild mushrooms, truffle oil, fontina cheese, arugula</p>
+                        <span class="price">$24.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-scroll>Our Story</h2>
+            <div class="about-grid">
+                <div class="about-text" data-scroll>
+                    <p>For over three generations, our family has been perfecting the art of pizza-making. Using traditional techniques and the freshest local ingredients, we create pizzas that tell a story of passion and craftsmanship.</p>
+                    <div class="features">
+                        <div class="feature-item" data-scroll>
+                            <span>🍅 Fresh Ingredients</span>
+                            <div class="feature-bar"><div class="feature-progress" data-width="100%"></div></div>
+                        </div>
+                        <div class="feature-item" data-scroll>
+                            <span>👨‍🍳 Master Chefs</span>
+                            <div class="feature-bar"><div class="feature-progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="feature-item" data-scroll>
+                            <span>🔥 Wood-Fired Oven</span>
+                            <div class="feature-bar"><div class="feature-progress" data-width="98%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-scroll>
+                    <div class="rotating-oven"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="order">
+        <div class="container">
+            <h2 class="section-title" data-scroll>Ready to Order?</h2>
+            <div class="order-content" data-scroll>
+                <form class="order-form" id="orderForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select required>
+                        <option value="">Select Your Pizza</option>
+                        <option value="margherita">Margherita Classica</option>
+                        <option value="pepperoni">Pepperoni Passion</option>
+                        <option value="truffle">Truffle Forest</option>
+                    </select>
+                    <textarea placeholder="Special Instructions" rows="3"></textarea>
+                    <button type="submit">Place Order</button>
+                </form>
+                <div class="order-info">
+                    <div class="info-item">📞 (555) 123-PIZZA</div>
+                    <div class="info-item">🕒 Open daily 11AM - 11PM</div>
+                    <div class="info-item">📍 123 Pizza Street, Food City</div>
+                    <div class="delivery-time">
+                        <div class="time-badge">🚗 25-35 min delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pizza Paradiso. Made with ❤️ and 🍕</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
